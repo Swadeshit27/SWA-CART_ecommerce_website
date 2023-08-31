@@ -4,7 +4,7 @@ const PaymentPage = () => {
     const checkoutHandler = async (amount) => {
         const { data: { key } } = await axios.get("http://www.localhost:6001/api/getKey")
         console.log(key)
-        const { data: { order } } = await axios.post("http://localhost:6001/api/checkout", {
+        const { data: { order } } = await axios.post("https://e-commerce-u47d.onrender.com/api/checkout", {
             amount
         })
         console.log(order);
@@ -16,7 +16,7 @@ const PaymentPage = () => {
             description: "A e-commerce store",
             image: "https://avatars.githubusercontent.com/u/25058652?v=4",
             order_id: order.id,
-            callback_url: "http://localhost:6001/api/verification",
+            callback_url: "https://e-commerce-u47d.onrender.com/api/verification",
             prefill: {
                 name: "Gaurav Kumar",
                 email: "gaurav.kumar@example.com",

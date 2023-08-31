@@ -27,7 +27,7 @@ const Signup = () => {
             formData.append('email', email);
             formData.append('password', password);
             formData.append('mobile', mobile);
-            const { data } = await axios.post('http://localhost:6001/auth/register', formData);
+            const { data } = await axios.post('https://e-commerce-u47d.onrender.com/auth/register', formData);
             setLoading(false);
             if (data.success) {
                 const { user, token } = data;

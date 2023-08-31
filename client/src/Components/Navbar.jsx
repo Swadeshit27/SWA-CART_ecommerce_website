@@ -47,7 +47,7 @@ const Navbar = () => {
           </Link>
           <div className="nav-icon relative">
             <Avatar
-              src={user ? `http://localhost:6001/assets/${user.photo}` : ""}
+              src={user ? `https://e-commerce-u47d.onrender.com/assets/${user.photo}` : ""}
               size="large"
               icon={<UserOutlined />}
               onClick={(e) => setSubNav(!SubNav)}

@@ -12,7 +12,7 @@ const ForgetPassword = () => {
     const handelLogIn = async (e) => {
         if (!(email && password)) message.warning('please fill all the fields');
         else {
-            const res = await axios.post('http://localhost:6001/auth/forget', { email, password });
+            const res = await axios.post('https://e-commerce-u47d.onrender.com/auth/forget', { email, password });
             if (res.data.success) {
                 message.success(res.data.message);
                 navigate('/login');

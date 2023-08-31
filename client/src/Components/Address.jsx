@@ -27,7 +27,7 @@ const Address = () => {
         }
         else {
             setLoading(true);
-            const { data } = await axios.post('http://localhost:6001/address', { email, address });
+            const { data } = await axios.post('https://e-commerce-u47d.onrender.com/address', { email, address });
             setLoading(false);
             message.success('Address saved');
             dispatch(AddAddress(data.data));
@@ -39,8 +39,8 @@ const Address = () => {
     const checkoutHandler = async (data) => {
         const { name, mobile } = data;
         setLoading(true);
-        const { data: { key } } = await axios.get("http://www.localhost:6001/api/getKey")
-        const { data: { order } } = await axios.post("http://localhost:6001/api/checkout", {
+        const { data: { key } } = await axios.get("https://e-commerce-u47d.onrender.com/api/getKey")
+        const { data: { order } } = await axios.post("https://e-commerce-u47d.onrender.com/api/checkout", {
             amount: 5000
         })
         setLoading(false);
@@ -48,11 +48,11 @@ const Address = () => {
             key,
             amount: order.amount,
             currency: "INR",
-            name: "Pal E-commerce store",
+            name: "SWA-CART",
             description: "A e-commerce store",
-            image: "https://avatars.githubusercontent.com/u/25058652?v=4",
+            image: "logo2.png",
             order_id: order.id,
-            callback_url: "http://localhost:6001/api/verification",
+            callback_url: "https://e-commerce-u47d.onrender.com/api/verification",
             prefill: {
                 name,
                 email: email,
@@ -84,6 +84,7 @@ const Address = () => {
                                 {addressList.map((val, i) => (
                                     <Radio value={val} className='' key={i} onChange={e => console.log(e.target.value)}>
                                         <SaveAddresses data={val} />
+                                        <button className='cartBtn' onClick={() => checkoutHandler(val)}> make payment</button>
                                     </Radio>
                                 ))}
                             </Radio.Group>

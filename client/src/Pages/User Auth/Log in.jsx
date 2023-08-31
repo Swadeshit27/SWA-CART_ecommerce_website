@@ -16,7 +16,7 @@ const Login = () => {
     const onSubmit = async (val) => {
         const { email, password } = val;
         setLoading(true);
-        const { data } = await axios.post('http://localhost:6001/auth/login', { email, password });
+        const { data } = await axios.post('https://e-commerce-u47d.onrender.com/auth/login', { email, password });
         setLoading(false)
         if (data.success) {
             message.success(data.message);
