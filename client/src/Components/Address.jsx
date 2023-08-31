@@ -82,9 +82,8 @@ const Address = () => {
                         <div className="flex p-4 w-full ">
                             <Radio.Group name="radiogroup" className='w-full h-full' >
                                 {addressList.map((val, i) => (
-                                    <Radio value={val} className='' key={i}>
+                                    <Radio value={val} className='' key={i} onChange={e => console.log(e.target.value)}>
                                         <SaveAddresses data={val} />
-                                        <button className='cartBtn mt-2' onClick={() => checkoutHandler(val)}>Make payment</button>
                                     </Radio>
                                 ))}
                             </Radio.Group>
