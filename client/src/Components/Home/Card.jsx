@@ -15,7 +15,7 @@ const Card = ({ data }) => {
                     <ProductDetails data={data} />
                     <div className='flex justify-between items-center my-2'>
                         <button className='cartBtn w-[50%]' onClick={() => dispatch(AddToCart(data))} >Add To Cart</button>
-                        <button className='cartBtn w-[50%] me-0' >Buy Now</button>
+                        {/* <button className='cartBtn w-[50%] me-0' >Buy Now</button> */}
                     </div>
                 </div>
             </div>

@@ -26,7 +26,7 @@ const ProductDetails = ({ data }) => {
                     ₹{originalPrice}
                 </p>
                 <p className="text-green-600 font-semibold text-lg">
-                    {Math.floor((originalPrice - price) / 100)}% off
+                    {Math.floor(((originalPrice - price) * 100) / originalPrice)}% off
                 </p>
             </div>
             {price >= 500 ? (

@@ -1,16 +1,16 @@
 export const ElectronicsData = [
   {
-    id: 1,
+    id: 25,
     imgSrc:
-      "https://rukminim2.flixcart.com/image/612/612/l2p23rk0/iron/b/i/k/-original-imagdz3jvqmnukxt.jpeg?q=70",
-    category: "Electronics",
-    title: "Nova Plus Amaze NI 30 1100 W Dry Iron  (White , Blue)",
-    colors: ["white & blue"],
-    rating: 4.2,
-    review: 1235,
-    originalPrice: 899,
-    price: 494,
-    discount: "45% off",
+      "https://rukminim2.flixcart.com/image/612/612/l3929ow0/puzzle/y/t/k/1-premium-speed-cube-3x3x3-for-kids-and-adults-multicolor-original-imageexxbc9yzk5p.jpeg?q=70",
+    category: "Toys",
+    title:
+      "fluffies 3x3 SpeedCube High Speed Smooth Turning Magic Cube Puzzle Brainteaser-RUBIC CUBE  (1 Pieces)",
+    rating: 4.1,
+    review: 3327,
+    originalPrice: 699,
+    price: 125,
+    discount: "78% off",
   },
   {
     id: 2,
@@ -239,6 +239,211 @@ export const ElectronicsData = [
     review: 234,
     originalPrice: 2099,
     price: 459,
+    discount: "78% off",
+  },
+  {
+    id: 19,
+    company: "Campus",
+    imgSrc:
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/g/1/f/6-11g-787-6-campus-wht-sil-b-org-original-imaghycd7arhuqk9.jpeg?q=70",
+    category: "shoes",
+    title: "FIRST Running Shoes For Men  (White)",
+    colors: ["White"],
+    size: ["6", "7", "8", "9", "10"],
+    rating: 4.1,
+    review: 2124,
+    originalPrice: 1899,
+    price: 1299,
+    discount: "78% off",
+  },
+  {
+    id: 20,
+    company: "Asian",
+    imgSrc:
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/9/z/s/-original-imags8uszrgshqtc.jpeg?q=70",
+    category: "shoes",
+    title:
+      "Nexon-03 White Gym,Sports,Casual,Walking,Stylish Walking Shoes For Men  (White, Orange)",
+    colors: ["White"],
+    size: ["6", "7", "8", "9", "10"],
+    rating: 4.1,
+    review: 224,
+    originalPrice: 1199,
+    price: 763,
+    discount: "78% off",
+  },
+  {
+    id: 21,
+    company: "Sparx",
+    imgSrc:
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/k/w/w/-original-imagrnddgwysrka2.jpeg?q=70",
+    category: "shoes",
+    title: "SM-678 Running Shoes For Men  (Blue, Green)",
+    colors: ["White"],
+    size: ["6", "7", "8", "9", "10"],
+    rating: 4.1,
+    review: 542,
+    originalPrice: 1799,
+    price: 1079,
+    discount: "78% off",
+  },
+  {
+    id: 22,
+    company: "PUMA ",
+    imgSrc:
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/m/9/c/-original-imagq9jysggzcgsa.jpeg?q=70",
+    category: "shoes",
+    title: "Hustle V2 Sneakers For Men  (Green)",
+    colors: ["White"],
+    size: ["6", "7", "8", "9", "10"],
+    rating: 4.1,
+    review: 23214,
+    originalPrice: 3999,
+    price: 1299,
+    discount: "78% off",
+  },
+  {
+    id: 23,
+    company: "HRX by Hrithik Roshan",
+    imgSrc:
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/g/1/f/6-11g-787-6-campus-wht-sil-b-org-original-imaghycd7arhuqk9.jpeg?q=70",
+    category: "shoes",
+    title: "SWIFT RUN Running Shoes For Men  (Grey)",
+    colors: ["White"],
+    size: ["6", "7", "8", "9", "10"],
+    rating: 4.1,
+    review: 818,
+    originalPrice: 1899,
+    price: 990,
+    discount: "78% off",
+  },
+  {
+    id: 24,
+    imgSrc:
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/card-game/u/t/9/10-uno-playing-card-game-for-kids-pack-of-1-multicolor-spiritual-original-imagh56guwukqrqg.jpeg?q=70",
+    category: "Toys",
+    title:
+      "AL ATASH UNO Classic Colour & Number Matching Card Game, 108 UNO Cards For Kids & Adults  (Multicolor)",
+    rating: 4,
+    review: 332,
+    originalPrice: 499,
+    price: 124,
+    discount: "78% off",
+  },
+  {
+    id: 25,
+    imgSrc:
+      "https://rukminim2.flixcart.com/image/612/612/l3929ow0/puzzle/y/t/k/1-premium-speed-cube-3x3x3-for-kids-and-adults-multicolor-original-imageexxbc9yzk5p.jpeg?q=70",
+    category: "Toys",
+    title:
+      "fluffies 3x3 SpeedCube High Speed Smooth Turning Magic Cube Puzzle Brainteaser-RUBIC CUBE  (1 Pieces)",
+    rating: 4.1,
+    review: 3327,
+    originalPrice: 699,
+    price: 125,
+    discount: "78% off",
+  },
+  {
+    id: 26,
+    imgSrc:
+      "https://rukminim2.flixcart.com/image/612/612/kfpq5jk0/remote-control-toy/j/4/z/remote-control-car-for-kids-rc-stunt-vehicle-360-rotating-original-imafw47yxs5rhpqy.jpeg?q=70",
+    category: "Toys",
+    title:
+      "Parteet Rechargeable 360°Rotating Rolling Radio Remote Control Electric Race Stunt Car  (Red)",
+    rating: 3.9,
+    review: 32,
+    originalPrice: 699,
+    price: 342,
+    discount: "78% off",
+  },
+  {
+    id: 27,
+    imgSrc:
+      "https://rukminim2.flixcart.com/image/612/612/l31x2fk0/gun/j/l/x/s-toy-gun-pubg-for-kids-with-6mm-bbbullet-8-round-20-25-bulets-original-image97ytvfgeg3z.jpeg?q=70",
+    category: "Toys",
+    title:
+      "Rajni Mauser Toy Gun for Kids with BB Bullets (50-60) Guns & Darts  (Black)",
+    rating: 3.8,
+    review: 532,
+    originalPrice: 499,
+    price: 148,
+    discount: "78% off",
+  },
+  {
+    id: 28,
+    imgSrc:
+      "https://rukminim2.flixcart.com/image/612/612/kzsqykw0/stuffed-toy/8/h/d/3-feet-pink-teddy-bear-with-neck-bow-88-os-retail-original-imagbqbycvygkak2.jpeg?q=70",
+    category: "Toys",
+    title:
+      "Osjs SOFT TOYS LOVER teddy bear pink colors size 3 feet very soft teddy bear - 90.2 cm  (Pink)",
+    rating: 4,
+    review: 3532,
+    originalPrice: 1599,
+    price: 309,
+    discount: "78% off",
+  },
+  {
+    id: 29,
+    imgSrc:
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/washing-machine-new/b/6/w/-original-imagrg646cqghbes.jpeg?q=70",
+    category: "TV & Appliances",
+    title:
+      "SAMSUNG 7.5 kg 5 star,Air Turbo Drying Semi Automatic Top Load Washing Machine Blue, Grey  (WT75M3200LL/TL)",
+    rating: 4.4,
+    review: 3532,
+    originalPrice: 15550,
+    price: 11990,
+    discount: "78% off",
+  },
+  {
+    id: 30,
+    imgSrc:
+      "https://rukminim2.flixcart.com/image/612/612/klzhq4w0/water-purifier/b/y/e/new-audi-aqua-fresh-original-imagyzvhkbzdnzyb.jpeg?q=70",
+    category: "TV & Appliances",
+    title:
+      "Aqua Fresh EPICAQUA+RO+UV+UF+TDSADJUSTER 15 L RO + UV + UF + ATDS Water Purifier with Prefilter  (Blue)",
+    rating: 4,
+    review: 2332,
+    originalPrice: 16550,
+    price: 3999,
+    discount: "78% off",
+  },
+  {
+    id: 31,
+    imgSrc:
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/vacuum-cleaner/b/x/w/ace-1600w-agaro-original-imagqjpn3vzughpq.jpeg?q=70",
+    category: "TV & Appliances",
+    title: "AGARO ACE 1600W Wet & Dry Vacuum Cleaner  (Grey and Black)",
+    rating: 4.3,
+    review: 3452,
+    originalPrice: 9999,
+    price: 5699,
+    discount: "78% off",
+  },
+  {
+    id: 32,
+    imgSrc:
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/air-conditioner-new/b/j/p/-original-imagkqs8y8zrv6bp.jpeg?q=70",
+    category: "TV & Appliances",
+    title:
+      "Voltas 2023 Model 1.5 Ton 3 Star Split Inverter AC - White  (183V Vectra Pride(4503445), Copper Condenser)",
+    rating: 4.2,
+    review: 7543,
+    originalPrice: 62990,
+    price: 32990,
+    discount: "78% off",
+  },
+  {
+    id: 29,
+    imgSrc:
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/refrigerator-new/d/9/e/-original-imagnjywkah7yfsw.jpeg?q=70",
+    category: "TV & Appliances",
+    title:
+      "SAMSUNG 189 L Direct Cool Single Door 5 Star Refrigerator with Base Drawer with Digital Inverter  (Camellia Purple, RR21C2H25CR/HL)",
+    rating: 4.4,
+    review: 8768,
+    originalPrice: 24999,
+    price: 17890,
     discount: "78% off",
   },
 ];

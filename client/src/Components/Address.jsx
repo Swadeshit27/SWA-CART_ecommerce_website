@@ -95,7 +95,7 @@ const Address = () => {
                             <input type="number" placeholder='Alternative no(optional)' className='inputStyle' value={address.altMobile} name='altMobile' onChange={e => addDetails(e)} />
                         </div>
                         <div className="col-span-8 flex items-center">
-                            <button className='cartBtn w-[50%] me-8' onClick={SaveAddress}>Save Address</button>
+                            <button className='cartBtn me-8' onClick={SaveAddress}>Save Address</button>
                             <p className='text-lg font-semibold text-blue-600 cursor-pointer' onClick={() => setAddAd(false)}>Cancel</p>
                         </div>
                     </div>

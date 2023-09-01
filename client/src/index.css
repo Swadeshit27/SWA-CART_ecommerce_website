@@ -24,7 +24,7 @@
     @apply font-bold;
   }
   h1 {
-    @apply text-3xl sm:text-4xl md:text-5xl capitalize;
+    @apply text-3xl sm:text-4xl md:text-5xl capitalize ;
   }
   h2 {
     @apply text-2xl sm:text-3xl md:text-4xl capitalize;
@@ -74,7 +74,7 @@
     @apply h-10 w-10 bg-gray-300 border rounded-full flex justify-center items-center hover:text-[#ff0000] cursor-pointer duration-300 absolute top-4 right-[-4rem];
   }
   .footerListStyle{
-    @apply list-none leading-3 text-black_500 dark:text-white_500 py-1 hover:underline cursor-pointer;
+    @apply list-none leading-3 text-black_500 dark:text-white_500 py-1 hover:underline cursor-pointer text-center;
   }
 
   .box:hover .hearticon {

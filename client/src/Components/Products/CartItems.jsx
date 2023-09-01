@@ -3,16 +3,18 @@ import { FiPlus, FiMinus } from 'react-icons/fi'
 import { useDispatch } from "react-redux"
 import { DecreaseCnt, IncreaseCnt, RemoveItems, saveForLater } from "../../State"
 import AddToCartITems from "./AddToCartITems"
+import { useState } from 'react'
 
 const CartItems = ({ data }) => {
+    const [newQty, setQty] = useState(data.qty);
     const dispatch = useDispatch();
     const handelDecrement = (data) => {
+        setQty(newQty + 1)
         dispatch(DecreaseCnt(data));
-        window.location.reload();
     }
     const handelIncrement = (data) => {
+        setQty(newQty - 1)
         dispatch(IncreaseCnt(data));
-        window.location.reload();
     }
     return (
         <>
@@ -22,7 +24,7 @@ const CartItems = ({ data }) => {
                         <img src={data.imgSrc} alt="" className="w-full h-full object-contain" />
                         <div className='mt-4  flex'>
                             <p className="w-6 h-6 rounded-full bg-red-400  flex justify-center items-center text-white cursor-pointer " onClick={() => handelDecrement(data)}><FiMinus /></p>
-                            <input type="text" defaultValue={data.qty} className="w-8 border-2 mx-2  font-semibold rounded-md text-center outline-none" />
+                            <input type="text" defaultValue={newQty} className="w-8 border-2 mx-2  font-semibold rounded-md text-center outline-none" />
                             <p className="w-6 h-6 rounded-full bg-green-400  flex justify-center items-center text-white cursor-pointer " onClick={() => handelIncrement(data)}><FiPlus /></p>
                         </div>
                     </div>

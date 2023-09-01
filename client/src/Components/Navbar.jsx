@@ -15,7 +15,6 @@ const Navbar = () => {
   const Items = useSelector(state => state.Items);
   const user = useSelector(state => state.user);
   const [SubNav, setSubNav] = useState(false);
-  const [nav, setNav] = useState(true);
   // dark and light mode
   const mode = useSelector((state) => state.mode);
   useEffect(() => {
@@ -25,7 +24,7 @@ const Navbar = () => {
   });
 
   return (
-    <div className="w-full shadow-lg  z-10 bg-white dark:bg-black dark:text-white">
+    <div className="w-full shadow-lg  z-10 bg-white dark:bg-black_900 dark:text-white">
       <div className=" max-w-[1400px] mx-auto h-20  flex justify-between items-center md:flex-row p-4 sm:p-8">
         <div className="flex cursor-pointer" onClick={(e) => navigate("/")}>
           <img src="logo2.png" alt="logo" className="w-32 h-32" />
@@ -89,7 +88,7 @@ const Navbar = () => {
                   </>
                 }
               </div>
-              <div className="nav_SubItem" onClick={(e) => { dispatch(setLogout()), setNav(!nav) }}>
+              <div className="nav_SubItem" onClick={(e) => (setSubNav(false), dispatch(setLogout()))}>
                 <FiLogOut className="me-2" />
                 log out
               </div>
