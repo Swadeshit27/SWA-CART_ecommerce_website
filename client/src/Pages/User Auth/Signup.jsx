@@ -8,7 +8,7 @@ import { UserOutlined } from '@ant-design/icons';
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import InputField from '../../Components/InputField';
-import ReactLoading from 'react-loading';
+import Spinner from '../../Components/Spinner';
 
 const Signup = () => {
     const dispatch = useDispatch();
@@ -57,9 +57,7 @@ const Signup = () => {
     return (
         <>
             {loading ?
-                <div className="h-screen w-full flex justify-center  items-center ">
-                    <ReactLoading type={'spokes'} color={'#000'} height={150} width={150} />
-                </div> :
+                <Spinner /> :
                 <Formik
                     initialValues={{
                         name: "",

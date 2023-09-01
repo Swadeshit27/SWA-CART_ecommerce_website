@@ -6,12 +6,12 @@ import Signup from './Pages/User Auth/Signup'
 import ForgetPassword from './Pages/User Auth/ForgetPassword'
 import Error from './Pages/Error'
 import Footer from './Components/Footer'
-import Items from './Pages/Items'
 import Cart from './Pages/Cart'
 import OrderHistory from './Pages/OrderHistory'
 import PaymentSuccess from './Pages/PaymentSuccess'
 import PrivateRoute from './Components/PrivateRoute'
 import UserProfile from './Pages/UserProfile'
+import PublicRoute from './Components/PublicRoute'
 
 const App = () => {
   return (
@@ -19,13 +19,12 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route exact path='/' element={<PrivateRoute> <Home /></PrivateRoute>} />
-        <Route exact path='/Items' element={<PrivateRoute><Items /></PrivateRoute>} />
         <Route exact path='/cart' element={<PrivateRoute> <Cart /></PrivateRoute>} />
         <Route exact path='/history' element={<PrivateRoute> <OrderHistory /></PrivateRoute>} />
         <Route exact path='/profile' element={<PrivateRoute> <UserProfile /></PrivateRoute>} />
-        <Route exact path='/login' element={<Login />} />
-        <Route exact path='/signup' element={<Signup />} />
-        <Route exact path='/forget' element={<ForgetPassword />} />
+        <Route exact path='/login' element={<PublicRoute><Login /></PublicRoute>} />
+        <Route exact path='/signup' element={<PublicRoute><Signup /></PublicRoute>} />
+        <Route exact path='/forget' element={<PublicRoute><ForgetPassword /></PublicRoute>} />
         <Route path="/success" element={<PrivateRoute><PaymentSuccess /></PrivateRoute>} />
         <Route path='/*' element={<Error />} />
       </Routes>

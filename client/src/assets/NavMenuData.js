@@ -31,17 +31,7 @@ export const NavMenuData = [
   },
   {
     id: 7,
-    imgSrc: "Images/travel.webp",
-    title: "Travel",
-  },
-  {
-    id: 8,
     imgSrc: "Images/toys.webp",
     title: "Beauty, Toys & More",
-  },
-  {
-    id: 9,
-    imgSrc: "Images/two-wheelers.webp",
-    title: "Two Wheelers",
   },
 ];

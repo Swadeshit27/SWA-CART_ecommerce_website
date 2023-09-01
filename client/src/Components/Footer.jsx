@@ -5,30 +5,26 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     const date = new Date().getFullYear();
     return (
-        <div className='w-full bg-white_900 dark:bg-black_900'>
+        <div className='w-full bg-white_900 dark:bg-black_900 text-black_500 dark:text-white_500'>
             <div className='w-full max-w-[1040px] p-8 mx-auto grid  sm:gap-6 sm:grid-cols-2 md:grid-cols-4 border-b '>
-                <div className='pl-10 md:pl-6' >
-                    <h3 className='font-medium text-2xl py-2 text-[#6876de]'>Location</h3>
-                    <List data={'India'} />
-                    <List data={'India'} />
-                    <List data={'India'} />
-                    <List data={'India'} />
+                <div className='' >
+                    <h3 className='font-medium text-2xl py-2 text-center text-[#6876de]'>Location</h3>
+                    <p className='text-center font-[600]'>Jalpaiguri, West Bengal-735102</p>
                 </div>
                 <div className='pl-10 md:pl-6'>
-                    <h1 className='font-medium text-2xl py-2 text-[#6876de]'>QuicK Links</h1>
+                    <h1 className='font-medium text-center text-2xl py-2 text-[#6876de]'>QuicK Links</h1>
                     <div className="flex flex-col">
-                        <Link to={'/'} className=' footerListStyle'>Home</Link>
-                        <Link to={'/cart'} className='footerListStyle'>Cart</Link>
-                        <Link to={'/history'} className='footerListStyle'>Order</Link>
-                        <Link to={'/contact'} className='footerListStyle'>Contact Us</Link>
+                        <Link to={'/'} className=' footerListStyle text-center'>Home</Link>
+                        <Link to={'/cart'} className='footerListStyle  text-center'>Cart</Link>
+                        <Link to={'/history'} className='footerListStyle  text-center'>Order</Link>
                     </div>
                 </div>
                 <div className='pl-10 md:pl-6'>
                     <h1 className='font-medium text-2xl py-2 text-[#6876de]'>Contact Info</h1>
-                    <List data={'+123-456-7898'} />
-                    <List data={'+123-456-7898'} />
-                    <List data={'rohanhati@gmail.com'} />
-                    <List data={'subhampal@gmail.com'} />
+                    <li className='footerListStyle'>+919478698985</li>
+                    <li className='footerListStyle'>+918689352456</li>
+                    <li className='footerListStyle'>swa-cart.help@gmail.com</li>
+                    <li className='footerListStyle'>contact.swacart@gmail.com</li>
                 </div>
                 <div className='pl-10 md:pl-6'>
                     <h1 className='font-medium text-2xl py-2 text-[#6876de] text-center'>Follow Us</h1>
@@ -45,9 +41,3 @@ const Footer = () => {
     )
 }
 export default Footer
-
-const List = ({ data }) => {
-    return (
-        <li className='footerListStyle'>{data}</li>
-    )
-}

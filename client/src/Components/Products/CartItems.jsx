@@ -1,9 +1,8 @@
-import ProductDetails from "./ProductDetails"
 import { RiDeleteBin6Line } from 'react-icons/ri'
-import { AiFillThunderbolt } from 'react-icons/ai'
 import { FiPlus, FiMinus } from 'react-icons/fi'
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch } from "react-redux"
 import { DecreaseCnt, IncreaseCnt, RemoveItems, saveForLater } from "../../State"
+import AddToCartITems from "./AddToCartITems"
 
 const CartItems = ({ data }) => {
     const dispatch = useDispatch();
@@ -28,14 +27,13 @@ const CartItems = ({ data }) => {
                         </div>
                     </div>
                     <div className='min-h-[5rem] w-full'>
-                        <ProductDetails data={data} />
+                        <AddToCartITems data={data} />
                     </div>
                 </div>
                 <div className="w-full mt-4 flex">
                     <button className="cartBtn" onClick={() => dispatch(saveForLater(data))}>Save for later</button>
                     <button className="cartBtn" onClick={() => dispatch(RemoveItems(data))}><RiDeleteBin6Line className="me-2" /> Remove</button>
-                    <button className="cartBtn"><AiFillThunderbolt className="me-2" /> Buy this now</button>
-
+                    {/* <button className="cartBtn"><AiFillThunderbolt className="me-2" /> Buy this now</button> */}
                 </div>
             </div>
         </>

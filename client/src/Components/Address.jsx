@@ -3,15 +3,15 @@ import { FaPlus } from 'react-icons/fa'
 import { Radio, message } from 'antd';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
-import { AddAddress } from '../State';
+import { AddAddress, PlaceOrder } from '../State';
 import ReactLoading from 'react-loading';
 
 
 const Address = () => {
     const { email, addressList } = useSelector(state => state.user);
-    const { originalPrice } = useSelector(state => state.originalPrice);
+    const totalPrice = useSelector((state) => state.totalPrice);
+    const Items = useSelector((state) => state.Items);
     const dispatch = useDispatch();
-    const [select, setSelect] = useState(false);
     const [AddAd, setAddAd] = useState(false);
     const [address, setAddress] = useState({ name: "", mobile: "", pin: "", locality: "", fullAddress: '', city: '', state: '', landmark: '', altMobile: '' });
     const [loading, setLoading] = useState(false);
@@ -19,6 +19,13 @@ const Address = () => {
     const addDetails = (e) => {
         const { value, name } = e.target;
         setAddress({ ...address, [name]: value });
+    }
+
+    const makePayment = (orderAddress) => {
+        if (!orderAddress) message.error('select address');
+        else {
+            dispatch(PlaceOrder({ orderAddress, Items, totalPrice }));
+        }
     }
     const SaveAddress = async (e) => {
         const { name, mobile, pin, locality, fullAddress, city, state } = address;
@@ -32,43 +39,9 @@ const Address = () => {
             message.success('Address saved');
             dispatch(AddAddress(data.data));
             setAddress({ name: "", mobile: "", pin: "", locality: "", fullAddress: '', city: '', state: '', landmark: '', altMobile: '' });
-            setAddAd(false)
+            setAddAd(false);
         }
     }
-    /****************************************** Payment section  start******************************************** */
-    const checkoutHandler = async (data) => {
-        const { name, mobile } = data;
-        setLoading(true);
-        const { data: { key } } = await axios.get("https://e-commerce-u47d.onrender.com/api/getKey")
-        const { data: { order } } = await axios.post("https://e-commerce-u47d.onrender.com/api/checkout", {
-            amount: 5000
-        })
-        setLoading(false);
-        const options = {
-            key,
-            amount: order.amount,
-            currency: "INR",
-            name: "SWA-CART",
-            description: "A e-commerce store",
-            image: "logo2.png",
-            order_id: order.id,
-            callback_url: "https://e-commerce-u47d.onrender.com/api/verification",
-            prefill: {
-                name,
-                email: email,
-                contact: mobile
-            },
-            notes: {
-                "address": "Razorpay Corporate Office"
-            },
-            theme: {
-                "color": "#FF9B50"
-            }
-        };
-        const razor = new window.Razorpay(options);
-        razor.open();
-    }
-    /****************************************** Payment section end ******************************************** */
 
     return (
         <>
@@ -82,9 +55,8 @@ const Address = () => {
                         <div className="flex p-4 w-full ">
                             <Radio.Group name="radiogroup" className='w-full h-full' >
                                 {addressList.map((val, i) => (
-                                    <Radio value={val} className='' key={i} onChange={e => console.log(e.target.value)}>
+                                    <Radio value={val} className='' key={i} onChange={e => makePayment(e.target.value)}>
                                         <SaveAddresses data={val} />
-                                        <button className='cartBtn' onClick={() => checkoutHandler(val)}> make payment</button>
                                     </Radio>
                                 ))}
                             </Radio.Group>
@@ -93,7 +65,7 @@ const Address = () => {
                     <div className="w-full flex items-center my-4 bg-white_900 dark:bg-black_900 text-blue-600 text-xl font-semibold  px-4 py-2" onClick={() => setAddAd(true)}>
                         <FaPlus className='me-4' /> Add New Address
                     </div>
-                    <div className={AddAd ? "w-full min-h-[10rem] grid grid-cols-12 gap-x-4 gap-y-6  bg-white_900 dark:bg-black_900 p-8 rounded-md shadow-lg" : "hidden"}>
+                    <div className={AddAd ? "w-full min-h-[10rem] grid grid-cols-12 gap-x-4 gap-y-6 mb-8 bg-white_900 dark:bg-black_900 p-8 rounded-md shadow-lg" : "hidden"}>
                         <h3 className='col-span-12 text-blue-600 font-semibold'>Add New Address</h3>
                         <div className="col-span-6">
                             <input type="text" placeholder='Name*' className='inputStyle' name='name' value={address.name} onChange={e => addDetails(e)} />
@@ -147,7 +119,6 @@ const SaveAddresses = ({ data }) => {
             <div className="flex text-black_100 dark:text-white_100">
                 <p>{locality}, {fullAddress},{city}, {state}-{pin}</p>
             </div>
-
         </div>
     )
 }

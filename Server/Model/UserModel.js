@@ -6,9 +6,9 @@ const userSchema = new mongoose.Schema({
     password: String,
     mobile: Number,
     photo: String,
-    addressList: {
-        type:Array,
-    }
+    addressList: Array,
+    cartItems: Array,
+    orderHistory: Array,
 }, { timestamps: true })
 
 const User = mongoose.model("User", userSchema);

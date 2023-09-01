@@ -6,8 +6,8 @@ import { setLogin } from '../../State/index';
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import InputField from '../../Components/InputField';
-import ReactLoading from 'react-loading';
 import { useState } from 'react';
+import Spinner from '../../Components/Spinner';
 
 const Login = () => {
     const dispatch = useDispatch();
@@ -37,9 +37,7 @@ const Login = () => {
     return (
         <>
             {loading ?
-                <div className="h-screen w-full flex justify-center  items-center ">
-                    <ReactLoading type={'spokes'} color={'#000'} height={150} width={150} />
-                </div> :
+                <Spinner /> :
                 <Formik
                     initialValues={{
                         email: "",
@@ -58,6 +56,7 @@ const Login = () => {
                                     <h2 className="text-center pb-4 text-orange-500">log in</h2>
                                     <InputField label="Email" type='email' name='email' />
                                     <InputField label="password" type='password' name='password' />
+                                    <Link className=' mt-2 text-blue-500 cursor-pointer hover:underline' to={'/forget'}>Forget password?  </Link>
                                     <div className="flex mt-4">
                                         <button type="submit" className="cartBtn">Log in</button>
                                         <button type="reset" className="cartBtn bg-red-500">Reset</button>

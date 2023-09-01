@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux'
 
 const UserProfile = () => {
   const user = useSelector(state => state.user);
-  console.log(user);
   const { email, mobile, name, photo } = user;
 
   return (
@@ -13,8 +12,8 @@ const UserProfile = () => {
         <img src={`https://e-commerce-u47d.onrender.com/assets/${photo}`} alt="myphoto" className='w-[10rem] h-[10rem] object-contain ' />
         <div className='flex flex-col justify-center ms-4'>
           <p className='text-xl font-semibold'>{name}</p>
-          <p className='text-xl font-semibold'>{email}</p>
-          <p className='text-xl font-semibold'>{mobile}</p>
+          <p className='text-xl font-semibold'>Email: {email}</p>
+          <p className='text-xl font-semibold'>Mobile: {mobile}</p>
         </div>
       </div>
     </div>

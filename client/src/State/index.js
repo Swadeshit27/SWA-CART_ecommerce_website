@@ -8,7 +8,11 @@ const initialState = {
     totalPrice: 0,
     originalPrice: 0,
     LaterItems: [],
-    address: [],
+    Order: {
+        address: null,
+        finalPrice: 0,
+        orderItems: null,
+    }
 }
 export const authSlice = createSlice({
     name: "auth",
@@ -22,6 +26,12 @@ export const authSlice = createSlice({
             state.token = action.payload.token;
         },
         setLogout: (state) => {
+            state.Items = []
+            state.totalPrice = 0;
+            state.originalPrice = 0;
+            state.Order.address = null;
+            state.Order.finalPrice = null;
+            state.Order.orderItems = null;
             state.user = null;
             state.token = null;
         },
@@ -34,15 +44,14 @@ export const authSlice = createSlice({
             }
             else {
                 const tempData = { ...action.payload, qty: 1 }
-                console.log(tempData);
                 state.Items.push(tempData);
-                state.totalPrice += action.payload.price;
-                state.originalPrice += action.payload.originalPrice;
             }
+            state.totalPrice += action.payload.price;
+            state.originalPrice += action.payload.originalPrice;
         },
         RemoveItems: (state, action) => {
-            state.totalPrice -= action.payload.price;
-            state.originalPrice -= action.payload.originalPrice;
+            state.totalPrice -= (action.payload.price * action.payload.qty);
+            state.originalPrice -= (action.payload.originalPrice * action.payload.qty);
             const updateItems = state.Items.filter(val => val.id !== action.payload.id);
             state.Items = updateItems;
         },
@@ -73,6 +82,8 @@ export const authSlice = createSlice({
             );
             if (state.Items[index].qty < 10) {
                 state.Items[index].qty += 1;
+                state.totalPrice += action.payload.price;
+                state.originalPrice += action.payload.originalPrice;
             }
         },
         DecreaseCnt: (state, action) => {
@@ -81,10 +92,26 @@ export const authSlice = createSlice({
             );
             if (state.Items[index].qty > 1) {
                 state.Items[index].qty -= 1;
+                state.totalPrice -= action.payload.price;
+                state.originalPrice -= action.payload.originalPrice;
             }
+        },
+        EmptyCart: (state, action) => {
+            state.Items = []
+            state.totalPrice = 0;
+            state.originalPrice = 0;
+            state.Order.address = null;
+            state.Order.finalPrice = null;
+            state.Order.orderItems = null;
+        },
+        PlaceOrder: (state, action) => {
+            state.Order.finalPrice = action.payload.totalPrice;
+            state.Order.orderItems = action.payload.Items;
+            state.Order.address = action.payload.orderAddress;
         }
     }
 })
 
-export const { setMode, setLogout, setLogin, AddToCart, RemoveItems, saveForLater, MoveToCart, RemoveFromLater, IncreaseCnt, DecreaseCnt, AddAddress } = authSlice.actions;
+export const { setMode, setLogout, setLogin, AddToCart, RemoveItems, saveForLater, MoveToCart, RemoveFromLater, IncreaseCnt, DecreaseCnt, AddAddress,
+    EmptyCart, PlaceOrder } = authSlice.actions;
 export default authSlice.reducer;

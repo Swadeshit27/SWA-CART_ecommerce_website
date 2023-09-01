@@ -1,7 +1,7 @@
 import { AiFillStar } from "react-icons/ai";
 
 const ProductDetails = ({ data }) => {
-    const { title, qty, colors, rating, originalPrice, price } = data;
+    const { title, qty, colors, review, rating, originalPrice, price } = data;
     return (
         <>
             <h4 className="font-semibold text-xl md:text-lg   w-full  truncate text-black_700 dark:text-white_700">
@@ -15,21 +15,21 @@ const ProductDetails = ({ data }) => {
                     {rating} <AiFillStar className="ms-2" />
                 </div>
                 <p className=" dark:text-white-300 ps-2 text-black_300 dark:text-white_300  ">
-                    ({Math.floor(Math.random() * 1000)})
+                    ({review})
                 </p>
             </div>
             <div className="flex">
                 <p className=" text-black_900 dark:text-white_900  font-semibold pe-3 text-lg">
-                    ₹{price }
+                    ₹{price}
                 </p>
                 <p className=" text-black_100 dark:text-white_100 font-semibold pe-3 text-lg line-through">
-                    ₹{originalPrice }
+                    ₹{originalPrice}
                 </p>
                 <p className="text-green-600 font-semibold text-lg">
-                    {Math.floor((originalPrice - price)  / 100)}% off
+                    {Math.floor((originalPrice - price) / 100)}% off
                 </p>
             </div>
-            {price  >= 500 ? (
+            {price >= 500 ? (
                 <p className="text-black_700 dark:text-white_700">Free delivery</p>
             ) : (
                 <p className="text-black_700 dark:text-white_700">

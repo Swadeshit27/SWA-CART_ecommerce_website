@@ -39,16 +39,12 @@ export const login = async (req, res) => {
 // forget Password
 export const forgetPassword = async (req, res) => {
     const { email, password } = req.body;
-    console.log(email, password)
     try {
         const user = await User.findOne({ email });
         if (!user) return res.json({ message: "Email not exist", success: false });
-        console.log(user);
         const salt = await bcrypt.genSalt();
         const passwordHash = await bcrypt.hash(password, salt);
-        console.log(passwordHash)
         const updatePassword = await User.findOneAndUpdate({ email }, { password: passwordHash });
-        console.log(updatePassword);
         await updatePassword.save();
         // delete user.password
         res.status(200).json({ message: "password update successfully", success: true })

@@ -1,6 +1,22 @@
+import { message } from 'antd';
+import { useEffect } from 'react'
 import { AiFillCheckCircle } from 'react-icons/ai'
+import { useSelector } from 'react-redux'
+
 
 const OrderHistory = () => {
+    const { email } = useSelector(state => state.user);
+    const CheckOrders = async () => {
+        try {
+            const { data } = await axios.post('https://e-commerce-u47d.onrender.com/order', {email});
+            console.log(data)
+        } catch (error) {
+            message.error("Internal error")
+        }
+    }
+    useEffect(() => {
+        CheckOrders();
+    }, [])
     return (
         <>
             <div className="w-full max-w-[1400px] mx-auto p-4">
