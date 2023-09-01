@@ -7,9 +7,9 @@ const AddToCartITems = ({ data }) => {
             <h4 className="font-semibold text-xl md:text-lg   w-full  truncate text-black_700 dark:text-white_700">
                 {title}
             </h4>
-            <p className="  text-xl md:text-sm w-full text-black_300  dark:text-white-100 dark:text-white_100">
+            {/* <p className="  text-xl md:text-sm w-full text-black_300  dark:text-white-100 dark:text-white_100">
                 {colors[0]}
-            </p>
+            </p> */}
             <div className="flex my-2">
                 <div className=" py-1 text-sm font-bold text-white bg-green-600 flex justify-center items-center w-16 rounded-md ">
                     {rating} <AiFillStar className="ms-2" />

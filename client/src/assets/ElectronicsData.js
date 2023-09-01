@@ -1,15 +1,15 @@
 export const ElectronicsData = [
   {
-    id: 25,
+    id: 1,
     imgSrc:
-      "https://rukminim2.flixcart.com/image/612/612/l3929ow0/puzzle/y/t/k/1-premium-speed-cube-3x3x3-for-kids-and-adults-multicolor-original-imageexxbc9yzk5p.jpeg?q=70",
-    category: "Toys",
+      "https://rukminim2.flixcart.com/image/416/416/xif0q/trimmer/y/t/e/0-7-12-mm-hair-trimmer-for-men-stylish-professional-0-8-to-12mm-original-imagm7xw28kky5zv.jpeg?q=70",
+    category: "Electronics",
     title:
-      "fluffies 3x3 SpeedCube High Speed Smooth Turning Magic Cube Puzzle Brainteaser-RUBIC CUBE  (1 Pieces)",
-    rating: 4.1,
-    review: 3327,
-    originalPrice: 699,
-    price: 125,
+      "fEVETIS Hair Trimmer For Men Stylish Professional 0.8 TO 12MM TRIMMING RANGE Trimmer 180 min Runtime 4 Length Settings  (Rose Gold, Gold)luffies 3x3 SpeedCube High Speed Smooth Turning Magic Cube Puzzle Brainteaser-RUBIC CUBE  (1 Pieces)",
+    rating: 3.1,
+    review: 327,
+    originalPrice: 899,
+    price: 2999,
     discount: "78% off",
   },
   {
@@ -188,7 +188,7 @@ export const ElectronicsData = [
   {
     id: 15,
     imgSrc:
-      "hhttps://rukminim2.flixcart.com/image/612/612/l02r1jk0/shirt/f/d/3/xl-fbrml-r-fibermill-original-imagbxyuucvqrv6y.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/trouser/m/i/w/32-hltr003910-highlander-original-imafw2ju6uhhbkhc-bb.jpeg?q=70",
     category: "Fashion",
     title: "Men Regular Fit Solid Spread Collar Formal Shirt",
     colors: ["Red", "Yellow", "Navy Blue", "Maroon", "Orange"],
@@ -246,7 +246,7 @@ export const ElectronicsData = [
     company: "Campus",
     imgSrc:
       "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/g/1/f/6-11g-787-6-campus-wht-sil-b-org-original-imaghycd7arhuqk9.jpeg?q=70",
-    category: "shoes",
+    category: "Shoes",
     title: "FIRST Running Shoes For Men  (White)",
     colors: ["White"],
     size: ["6", "7", "8", "9", "10"],
@@ -261,7 +261,7 @@ export const ElectronicsData = [
     company: "Asian",
     imgSrc:
       "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/9/z/s/-original-imags8uszrgshqtc.jpeg?q=70",
-    category: "shoes",
+    category: "Shoes",
     title:
       "Nexon-03 White Gym,Sports,Casual,Walking,Stylish Walking Shoes For Men  (White, Orange)",
     colors: ["White"],
@@ -277,7 +277,7 @@ export const ElectronicsData = [
     company: "Sparx",
     imgSrc:
       "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/k/w/w/-original-imagrnddgwysrka2.jpeg?q=70",
-    category: "shoes",
+    category: "Shoes",
     title: "SM-678 Running Shoes For Men  (Blue, Green)",
     colors: ["White"],
     size: ["6", "7", "8", "9", "10"],
@@ -292,7 +292,7 @@ export const ElectronicsData = [
     company: "PUMA ",
     imgSrc:
       "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/m/9/c/-original-imagq9jysggzcgsa.jpeg?q=70",
-    category: "shoes",
+    category: "Shoes",
     title: "Hustle V2 Sneakers For Men  (Green)",
     colors: ["White"],
     size: ["6", "7", "8", "9", "10"],
@@ -307,7 +307,7 @@ export const ElectronicsData = [
     company: "HRX by Hrithik Roshan",
     imgSrc:
       "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/g/1/f/6-11g-787-6-campus-wht-sil-b-org-original-imaghycd7arhuqk9.jpeg?q=70",
-    category: "shoes",
+    category: "Shoes",
     title: "SWIFT RUN Running Shoes For Men  (Grey)",
     colors: ["White"],
     size: ["6", "7", "8", "9", "10"],
@@ -386,7 +386,7 @@ export const ElectronicsData = [
     id: 29,
     imgSrc:
       "https://rukminim2.flixcart.com/image/612/612/xif0q/washing-machine-new/b/6/w/-original-imagrg646cqghbes.jpeg?q=70",
-    category: "TV & Appliances",
+    category: "Appliances",
     title:
       "SAMSUNG 7.5 kg 5 star,Air Turbo Drying Semi Automatic Top Load Washing Machine Blue, Grey  (WT75M3200LL/TL)",
     rating: 4.4,
@@ -399,7 +399,7 @@ export const ElectronicsData = [
     id: 30,
     imgSrc:
       "https://rukminim2.flixcart.com/image/612/612/klzhq4w0/water-purifier/b/y/e/new-audi-aqua-fresh-original-imagyzvhkbzdnzyb.jpeg?q=70",
-    category: "TV & Appliances",
+    category: "Appliances",
     title:
       "Aqua Fresh EPICAQUA+RO+UV+UF+TDSADJUSTER 15 L RO + UV + UF + ATDS Water Purifier with Prefilter  (Blue)",
     rating: 4,
@@ -412,7 +412,7 @@ export const ElectronicsData = [
     id: 31,
     imgSrc:
       "https://rukminim2.flixcart.com/image/612/612/xif0q/vacuum-cleaner/b/x/w/ace-1600w-agaro-original-imagqjpn3vzughpq.jpeg?q=70",
-    category: "TV & Appliances",
+    category: "Appliances",
     title: "AGARO ACE 1600W Wet & Dry Vacuum Cleaner  (Grey and Black)",
     rating: 4.3,
     review: 3452,
@@ -424,7 +424,7 @@ export const ElectronicsData = [
     id: 32,
     imgSrc:
       "https://rukminim2.flixcart.com/image/612/612/xif0q/air-conditioner-new/b/j/p/-original-imagkqs8y8zrv6bp.jpeg?q=70",
-    category: "TV & Appliances",
+    category: "Appliances",
     title:
       "Voltas 2023 Model 1.5 Ton 3 Star Split Inverter AC - White  (183V Vectra Pride(4503445), Copper Condenser)",
     rating: 4.2,
@@ -434,10 +434,10 @@ export const ElectronicsData = [
     discount: "78% off",
   },
   {
-    id: 29,
+    id: 33,
     imgSrc:
       "https://rukminim2.flixcart.com/image/612/612/xif0q/refrigerator-new/d/9/e/-original-imagnjywkah7yfsw.jpeg?q=70",
-    category: "TV & Appliances",
+    category: "Appliances",
     title:
       "SAMSUNG 189 L Direct Cool Single Door 5 Star Refrigerator with Base Drawer with Digital Inverter  (Camellia Purple, RR21C2H25CR/HL)",
     rating: 4.4,

@@ -2,7 +2,7 @@ export const NavMenuData = [
   {
     id: 1,
     imgSrc: "Images/mobile.webp",
-    title: "Mobiles",
+    title: "Mobile",
   },
   {
     id: 2,
