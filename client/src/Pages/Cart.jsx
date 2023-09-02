@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import CartItems from "../Components/Products/CartItems";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Address from "../Components/Address";
 import SaveForLater from "../Components/Products/SaveForLater";
 import { message } from "antd";
 import Spinner from "../Components/Spinner";
 import axios from "axios";
 import { Navigate, useNavigate } from "react-router-dom";
+import { EmptyCart } from "../State";
 
 const Cart = () => {
   const totalPrice = useSelector((state) => state.totalPrice);
@@ -17,7 +18,7 @@ const Cart = () => {
   const { email } = useSelector(state => state.user)
   const [loading, setLoading] = useState(false);
   const [address, setAddress] = useState(true);
-  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const makeOrder = () => {
     if (!Order.address) message.error("please select Address")
@@ -58,6 +59,8 @@ const Cart = () => {
     };
 
     const razor = new window.Razorpay(options);
+    console.log(razor);
+    dispatch(EmptyCart());
     razor.open();
   }
   /****************************************** Payment section end ******************************************** */
