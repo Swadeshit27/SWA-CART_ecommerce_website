@@ -47,7 +47,7 @@ export const paymentVerification = async (req, res) => {
         // });
 
         res.redirect(
-            `https://totalitycorp-frontend-challenge-phi.vercel.app/success?reference=${razorpay_payment_id}`
+            `https://totalitycorp-frontend-challenge-l9vv.vercel.app/success?reference=${razorpay_payment_id}`
         );
     } else {
         res.status(400).json({
@@ -57,7 +57,7 @@ export const paymentVerification = async (req, res) => {
 };
 
 export const OrderHistory = async (req, res) => {
-    try { 
+    try {
         const { email } = req.body;
         const orderData = await User.findOne({ email });
         res.status(200).json(orderData);
