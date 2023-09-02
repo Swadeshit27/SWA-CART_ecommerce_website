@@ -47,7 +47,7 @@ export const paymentVerification = async (req, res) => {
         // });
 
         res.redirect(
-            `https://totalitycorp-frontend-challenge-l9vv.vercel.app/success?reference=${razorpay_payment_id}`
+            `https://totalitycorp-frontend-challenge-phi.vercel.app/success`
         );
     } else {
         res.status(400).json({
