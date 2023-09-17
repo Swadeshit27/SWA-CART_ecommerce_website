@@ -1,4 +1,4 @@
-# totalitycorp-frontend-challenge
+# E-commerce Website
 
 
 ## Demo link
