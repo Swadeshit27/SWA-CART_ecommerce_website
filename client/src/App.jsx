@@ -29,12 +29,12 @@ const App = () => {
         <Route exact path='/history' element={<PrivateRoute> <OrderHistory /></PrivateRoute>} />
         <Route exact path='/address' element={<PrivateRoute> <Address /></PrivateRoute>} />
         <Route exact path='/profile' element={<PrivateRoute> <UserProfile /></PrivateRoute>} />
-        <Route exact path='/addProducts' element={<AddProducts />} />
+{/*         <Route exact path='/addProducts' element={<AddProducts />} /> */}
 
-        <Route exact path='/admin' element={<PublicRoute><AdminLogin /></PublicRoute>} />
+{/*         <Route exact path='/admin' element={<PublicRoute><AdminLogin /></PublicRoute>} /> */}
         <Route exact path='/login' element={<PublicRoute><Login /></PublicRoute>} />
         <Route exact path='/signup' element={<PublicRoute><Signup /></PublicRoute>} />
-        <Route exact path='/otp' element={<OTPVerification />} />
+{/*         <Route exact path='/otp' element={<OTPVerification />} /> */}
         <Route exact path='/forget' element={<PublicRoute><ForgetPassword /></PublicRoute>} />
         <Route path="/success" element={<PrivateRoute><PaymentSuccess /></PrivateRoute>} />
         <Route path='/*' element={<Error />} />
