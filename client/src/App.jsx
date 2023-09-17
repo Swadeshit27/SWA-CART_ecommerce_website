@@ -13,10 +13,10 @@ import PrivateRoute from './Components/PrivateRoute'
 import UserProfile from './Pages/UserProfile'
 import PublicRoute from './Components/PublicRoute'
 import WatchList from './Pages/WatchList'
-import OTPVerification from './Pages/User Auth/OtpVerification'
+// import OTPVerification from './Pages/User Auth/OtpVerification'
 import Address from './Pages/Address'
-import AdminLogin from './Pages/User Auth/AdminLogin'
-import AddProducts from './Pages/AddProducts'
+// import AdminLogin from './Pages/User Auth/AdminLogin'
+// import AddProducts from './Pages/AddProducts'
 
 const App = () => {
   return (
