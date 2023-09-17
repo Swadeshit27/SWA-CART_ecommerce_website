@@ -6,20 +6,20 @@ export default {
   ],
   darkMode: "class",
   theme: {
-   
+
     extend: {
       colors: {
         white_900: '#ffffff',
         white_700: '#f2f2fc',
         white_500: '#d4d4d4',
-        white_300: '#c8c8cf',
-        white_100: '#fffcf4',
+        white_300: '#FEEEE5',
+        white_100: '#BDBDBD',
 
-        black_900: '#2b2a2a',
-        black_700: '#333',
-        black_500: '#172337',
-        black_300: '#212121',
-        black_100: '#878787',
+        black_900: '#1E2124',
+        black_700: '#23262A',
+        black_500: '#282B30',
+        black_300: '#515266',
+        black_100: '#36393E',
 
       }
     },

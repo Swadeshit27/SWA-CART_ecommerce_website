@@ -11,7 +11,9 @@ node_modules
 dist
 dist-ssr
 *.local
-
+AddProducts.jsx
+AdminLogin.jsx
+OtpVerification.jsx
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

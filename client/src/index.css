@@ -13,24 +13,31 @@
 
 @layer base {
   body {
-    @apply bg-[#f2f2fc] text-[#1f2937] tracking-wide;
-  }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-bold;
+    @apply bg-[#f2f2fc] text-[#939495] tracking-wide;
   }
   h1 {
-    @apply text-3xl sm:text-4xl md:text-5xl capitalize ;
+    @apply text-2xl  md:text-3xl  text-[#212121] dark:text-white;
   }
   h2 {
-    @apply text-2xl sm:text-3xl md:text-4xl capitalize;
+    @apply text-xl  md:text-2xl  text-[#1e2124] dark:text-[#F1F2F2];
   }
   h3 {
-    @apply text-xl sm:text-2xl md:text-3xl;
+    @apply text-lg md:text-xl  text-[#242526] dark:text-[#E0E0E0];
+  }
+  h4 {
+    @apply text-[16px] md:text-lg  text-[#36393e] dark:text-[#D2D2D6];
+  }
+  h5 {
+    @apply text-sm sm:text-lg  text-[#8e9091] dark:text-[#A5A6A7];
+  }
+  p {
+    @apply text-sm md:text-lg  text-[#404141] dark:text-[#c9cacb];
+  }
+  .bg_primary {
+    @apply bg-white_900 dark:bg-black_900  rounded-lg shadow-md dark:shadow-black_300 border dark:border-black_300;
+  }
+  .bg_secondary {
+    @apply bg-white_900 dark:bg-black_500 rounded-lg shadow-md dark:shadow-black_300 border dark:border-black_300;
   }
   .nav-item {
     @apply list-none py-1 px-3 cursor-pointer rounded-md  font-medium hover:bg-[#0e8964]  active:bg-[#0e8964] hover:text-white;
@@ -38,19 +45,11 @@
   .nav_SubItem {
     @apply flex items-center ps-8 text-[1rem] py-2 capitalize cursor-pointer hover:bg-white_100 hover:dark:bg-black_100  rounded-md;
   }
-
   .nav-icon {
-    @apply h-10 w-10 bg-gray-600 border rounded-full flex justify-center items-center  text-white cursor-pointer;
+    @apply h-10 w-10 bg-white_700 dark:bg-black_300 text-black_900  rounded-full shadow-md flex justify-center items-center  dark:text-white cursor-pointer;
   }
 
-  .container-1 {
-    @apply w-full py-2 pb-4 bg-gray-200 px-8;
-  }
-
-  .container-2 {
-    @apply w-full py-2 pb-4 px-8;
-  }
-  .heading {
+  /* .heading {
     @apply font-medium md:text-5xl text-3xl py-3 mb-4 text-[#000066];
   }
 
@@ -60,28 +59,20 @@
 
   .btn {
     @apply w-[150px] py-2 bg-[#000066] text-white font-medium rounded-md  hover:bg-[#0000b3] hover:bg-[#0e8964];
-  }
+  } */
+  /* .about-btn {
+    @apply flex w-full justify-center items-center gap-2 font-medium  py-2 rounded-md bg-gray-300;
+  } */
+  /* .favourate {
+    @apply h-10 w-10 bg-gray-300 border rounded-full flex justify-center items-center hover:text-[#ff0000] cursor-pointer duration-300 absolute top-4 right-[-4rem];
+  } */
   .cartBtn {
     @apply w-[10rem] me-3 flex items-center justify-center rounded-md bg-orange-400 text-white cursor-pointer py-2 text-center text-lg font-semibold;
-  }
-  .about-btn {
-    @apply flex w-full justify-center items-center gap-2 font-medium  py-2 rounded-md bg-gray-300;
   }
   .inputStyle {
     @apply w-full text-lg bg-white_500 border rounded-md px-4 py-2 outline-none;
   }
-  .favourate {
-    @apply h-10 w-10 bg-gray-300 border rounded-full flex justify-center items-center hover:text-[#ff0000] cursor-pointer duration-300 absolute top-4 right-[-4rem];
-  }
-  .footerListStyle{
+  .footerListStyle {
     @apply list-none leading-3 text-black_500 dark:text-white_500 py-1 hover:underline cursor-pointer text-center;
-  }
-
-  .box:hover .hearticon {
-    right: 16px;
-  }
-
-  .hearticon:hover {
-    color: red;
   }
 }

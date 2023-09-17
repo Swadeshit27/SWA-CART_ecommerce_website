@@ -1,43 +1,73 @@
-import { message } from 'antd';
-import { useEffect } from 'react'
-import { AiFillCheckCircle } from 'react-icons/ai'
-import { useSelector } from 'react-redux'
-
+import { message } from "antd";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import Spinner from "../Components/Spinner";
+import { HiMiniMagnifyingGlass } from "react-icons/hi2";
+import OrderHistoryContainer from "../Components/OrderHistory/OrderHistoryContainer";
 
 const OrderHistory = () => {
-    const { email } = useSelector(state => state.user);
+    const { email } = useSelector((state) => state.user);
+    const [orderHistory, setOrderHistory] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [searchValue, setSearchValue] = useState("");
     const CheckOrders = async () => {
         try {
-            const { data } = await axios.post('https://e-commerce-u47d.onrender.com/order', {email});
-            console.log(data)
+            setLoading(true);
+            const { data } = await axios.post(
+                "https://e-commerce-u47d.onrender.com/products/order",
+                { email }
+            );
+            setLoading(false)
+            setOrderHistory(data);
         } catch (error) {
-            message.error("Internal error")
+            message.error("Internal error");
         }
-    }
+    };
     useEffect(() => {
         CheckOrders();
-    }, [])
+    }, []);
     return (
         <>
-            <div className="w-full max-w-[1400px] mx-auto p-4">
-                <div className="w-full min-h-20 bg-white_900 dark:bg-black_900 rounded-md shadow-lg flex flex-col md:flex-row my-4 p-8">
-                    <div className='flex md:w-[50%]'>
-                        <img src="https://rukminim2.flixcart.com/image/xif0q/trouser/l/2/8/38-aw19ch004d-metronaut-original-imafwyf6dhyahszf-bb.jpeg" alt="" className='w-24 h-16 object-contain me-4' />
-                        <div>
-                            <h4 className=' font-semibold text-sm md:text-lg   w-[80%]  text-black_700 dark:text-white_700'>METRONAUT Slim Fit Men Viscose Rayon Dar...</h4>
-                            <p className='text-dark_100 dark:text-white_100 text-sm'>Color: Dark green Size: 32</p>
-                            <p className='text-lg font-bold'>  ₹109</p>
+            {loading ? (
+                <Spinner />
+            ) : (
+                <>
+                    <div className="sm:m-8 my-4  sm:float-right max-sm:mx-auto  w-[90%] sm:w-[30rem]  bg_secondary overflow-hidden shadow-md border h-10 text-black_500 flex dark:text-white_500">
+                        <input
+                            className=" w-[90%] h-full px-4 outline-none dark:bg-black_500 "
+                            type="search"
+                            value={searchValue}
+                            onChange={(e) => setSearchValue(e.target.value)}
+                            placeholder="Search products"
+                        />
+                        <div className="w-[10%] h-full flex justify-center items-center cursor-pointer">
+                            <HiMiniMagnifyingGlass size={25} />
                         </div>
                     </div>
-                    <div className="md:w-[50%] ps-4">
-                        <div className='flex items-center text-lg font-semibold text-black_900 dark:text-white_900'><AiFillCheckCircle className='text-green-600 me-2' />  Delivered on 26 Aug</div>
-                        <p className='text-dark_100 dark:text-white_100'>Your item have been Delivered</p>
-                        <p className='text-blue-600 font-semibold'>Rate and review us</p>
+                    <div className="min-h-[90vh]">
+                        {orderHistory.length ? (
+                            orderHistory.map((val) =>
+                                val.orderItems
+                                    .filter((items) =>
+                                        items.title
+                                            .toLowerCase()
+                                            .includes(searchValue.toLowerCase())
+                                    )
+                                    .map((data) => (
+                                        <OrderHistoryContainer data={data} orderId={val.PaymentOrderId} paymentId={val.paymentId} id={val._id} key={data.id} date={val.createdAt} />
+                                    ))
+                            )
+                        ) : (
+                            <></>
+                        )}
                     </div>
-                </div>
-            </div>
+                </>
+            )}
         </>
-    )
-}
+    );
+};
 
-export default OrderHistory
+export default OrderHistory;
+
+

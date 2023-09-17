@@ -33,7 +33,7 @@ const Signup = () => {
                 const { user, token } = data;
                 dispatch(setLogin({ user, token }))
                 message.success(data.message);
-                navigate('/');
+                navigate('/', { state: email });
             }
             else message.error(data.message);
         }

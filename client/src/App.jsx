@@ -12,6 +12,11 @@ import PaymentSuccess from './Pages/PaymentSuccess'
 import PrivateRoute from './Components/PrivateRoute'
 import UserProfile from './Pages/UserProfile'
 import PublicRoute from './Components/PublicRoute'
+import WatchList from './Pages/WatchList'
+import OTPVerification from './Pages/User Auth/OtpVerification'
+import Address from './Pages/Address'
+import AdminLogin from './Pages/User Auth/AdminLogin'
+import AddProducts from './Pages/AddProducts'
 
 const App = () => {
   return (
@@ -20,10 +25,16 @@ const App = () => {
       <Routes>
         <Route exact path='/' element={<PrivateRoute> <Home /></PrivateRoute>} />
         <Route exact path='/cart' element={<PrivateRoute> <Cart /></PrivateRoute>} />
+        <Route exact path='/watch' element={<PrivateRoute> <WatchList /></PrivateRoute>} />
         <Route exact path='/history' element={<PrivateRoute> <OrderHistory /></PrivateRoute>} />
+        <Route exact path='/address' element={<PrivateRoute> <Address /></PrivateRoute>} />
         <Route exact path='/profile' element={<PrivateRoute> <UserProfile /></PrivateRoute>} />
+        <Route exact path='/addProducts' element={<AddProducts />} />
+
+        <Route exact path='/admin' element={<PublicRoute><AdminLogin /></PublicRoute>} />
         <Route exact path='/login' element={<PublicRoute><Login /></PublicRoute>} />
         <Route exact path='/signup' element={<PublicRoute><Signup /></PublicRoute>} />
+        <Route exact path='/otp' element={<OTPVerification />} />
         <Route exact path='/forget' element={<PublicRoute><ForgetPassword /></PublicRoute>} />
         <Route path="/success" element={<PrivateRoute><PaymentSuccess /></PrivateRoute>} />
         <Route path='/*' element={<Error />} />

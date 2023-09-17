@@ -27,6 +27,6 @@ export const NavMenuData = [
   {
     id: 6,
     imgSrc: "Images/toys.webp",
-    title: "Toys ",
+    title: "Toys",
   },
 ];

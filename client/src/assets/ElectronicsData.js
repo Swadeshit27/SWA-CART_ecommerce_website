@@ -5,11 +5,11 @@ export const ElectronicsData = [
       "https://rukminim2.flixcart.com/image/416/416/xif0q/trimmer/y/t/e/0-7-12-mm-hair-trimmer-for-men-stylish-professional-0-8-to-12mm-original-imagm7xw28kky5zv.jpeg?q=70",
     category: "Electronics",
     title:
-      "fEVETIS Hair Trimmer For Men Stylish Professional 0.8 TO 12MM TRIMMING RANGE Trimmer 180 min Runtime 4 Length Settings  (Rose Gold, Gold)luffies 3x3 SpeedCube High Speed Smooth Turning Magic Cube Puzzle Brainteaser-RUBIC CUBE  (1 Pieces)",
+      "EVETIS Hair Trimmer For Men Stylish Professional ",
     rating: 3.1,
     review: 327,
     originalPrice: 899,
-    price: 2999,
+    price: 299,
     discount: "78% off",
   },
   {

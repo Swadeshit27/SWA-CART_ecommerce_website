@@ -5,7 +5,7 @@ import CarouselContainer from '../Components/Home/Carousal'
 
 const Home = () => {
   return (
-    <div className='w-full min-h-screen py-12 px-4 '>
+    <div className='w-full min-h-screen py-6 md:py-12 md:px-4 '>
       <div>
         <CarouselContainer />
       </div>

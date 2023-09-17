@@ -8,7 +8,7 @@ const Footer = () => {
         <div className='w-full bg-white_900 dark:bg-black_900 text-black_500 dark:text-white_500'>
             <div className='w-full max-w-[1040px] p-8 mx-auto grid  sm:gap-6 sm:grid-cols-2 md:grid-cols-4 border-b '>
                 <div className='' >
-                    <h3 className='font-medium text-2xl py-2 text-center text-[#6876de]'>Location</h3>
+                    <h5 className='font-medium text-2xl py-2 text-center text-[#6876de]'>Location</h5>
                     <p className='text-center font-[600]'>Jalpaiguri, West Bengal-735102</p>
                 </div>
                 <div className=''>

@@ -8,6 +8,7 @@ const initialState = {
     totalPrice: 0,
     originalPrice: 0,
     LaterItems: [],
+    watchList: [],
     Order: {
         address: null,
         finalPrice: 0,
@@ -108,10 +109,18 @@ export const authSlice = createSlice({
             state.Order.finalPrice = action.payload.totalPrice;
             state.Order.orderItems = action.payload.Items;
             state.Order.address = action.payload.orderAddress;
+        },
+        setWatchList: (state, action) => {
+            const tempItems = { ...action.payload, isWatch: true }
+            state.watchList.push(tempItems);
+        },
+        removeFromWatchList: (state, action) => {
+            const list = state.watchList.filter(items => items.id !== action.payload.id);
+            state.watchList = list;
         }
     }
 })
 
 export const { setMode, setLogout, setLogin, AddToCart, RemoveItems, saveForLater, MoveToCart, RemoveFromLater, IncreaseCnt, DecreaseCnt, AddAddress,
-    EmptyCart, PlaceOrder } = authSlice.actions;
+    EmptyCart, PlaceOrder, setWatchList, removeFromWatchList } = authSlice.actions;
 export default authSlice.reducer;
