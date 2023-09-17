@@ -14,8 +14,10 @@ import cookieParser from "cookie-parser";
 /***********************  Import Router *************************************/
 import paymentRoute from './Router/PaymentRouter.js'
 import userAuth from './Router/UserAuth.js'
+import productsRoute from './Router/ProductsRoute.js'
 import { register } from "./Controller/UserControler.js";
-import { AddressControl } from "./Controller/AddressControl.js";
+import AddressRoute from './Router/AddressRoute.js'
+import { allProducts } from "./Controller/AllProductsControl.js";
 
 /*****************  Configurations or middleware **************************/
 const __filename = fileURLToPath(import.meta.url);
@@ -44,16 +46,18 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 /*****************  for Razor pay payment Intrigration  **************************/
-app.use("/api", paymentRoute);
 export const instance = new Razorpay({
     key_id: process.env.RAZORPAY_API_KEY,
     key_secret: process.env.RAZORPAY_APT_SECRET,
 });
 
 /*****************  route with file **************************/
+app.post("/admin/addProducts", allProducts);
 app.post("/auth/register", upload.single("picture"), register);
-app.post("/address", AddressControl);
 app.use("/auth", userAuth);
+app.use("/products", productsRoute);
+app.use("/address", AddressRoute);
+app.use("/api", paymentRoute);
 
 /*****************  Database connection  **************************/
 mongoose.connect(process.env.MONGOOSE_URL)

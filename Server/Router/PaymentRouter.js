@@ -1,5 +1,5 @@
 import express from "express";
-import { OrderHistory, checkout, paymentVerification } from "../Controller/PaymentControl.js";
+import { checkout, paymentVerification } from "../Controller/PaymentControl.js";
 const router = express.Router();
 
 router.get("/getKey", (req, res) =>
@@ -7,9 +7,5 @@ router.get("/getKey", (req, res) =>
 );
 router.post("/checkout", checkout); 
 router.post("/verification", paymentVerification);
-router.post("/order", OrderHistory)
-router.get('/hello', (req, res) => {
-    console.lgo('hello')
-})
 
 export default router;

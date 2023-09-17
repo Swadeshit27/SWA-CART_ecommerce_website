@@ -6,8 +6,8 @@ const OrderSchema = new mongoose.Schema(
         orderItems: Array,
         amount: Number,
         Payment: String,
-        refId: String,
-        Date: String,
+        PaymentOrderId: String,
+        paymentId: String,
     },
     { timestamps: true }
 );
